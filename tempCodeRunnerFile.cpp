@@ -1,23 +1,20 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-
+int fact(int n){
+    if(n<0){
+        return -1;
+    }
+    if(n==0){
+        return 1;
+    }
+    else{
+        return (n*fact(n-1));
+    }
+}
 int main()
 {
-
-int number,reverse,temp,sum = 0;
-cout<<"Enter number to check : ";
-cin>>number;
-temp = number;
-while(number>0){
-  reverse = number%10;
-  sum = (sum*10)+reverse;
-  number = number/10;
-}
-
-if(temp == sum){
-  cout<<"Is Palindrome";
-}
-else{
-  cout<<"NOt Palindrome";
-}
+   int n;
+   cin>>n;
+   int val = fact(n);
+   cout<<val;
 }
